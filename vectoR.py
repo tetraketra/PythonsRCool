@@ -140,7 +140,7 @@ class c:
     def __xor__(self, other):
         _selfItems, _otherItems = c.recycle(self.items, other.items)
         return c(*[(combo[0] and not combo[1]) or (not combo[0] and combo[1]) for combo in zip(_otherItems, _selfItems)])
-    def __invert__(self): #YOU HAVE TO USE ~cObj INSTEAD OF not cObj
+    def __invert__(self): #YOU HAVE TO USE ~c_instance INSTEAD OF not ~c_instance
         return c(*[not item for item in self.items])
 
     @staticmethod

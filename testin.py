@@ -9,6 +9,9 @@ test = c(True, False, False)
 test2 = c(True, True, False)
 print(test & test2)
 
+test = c(1, 2, 3, 4)
+test += 10
+print(test)
 
 test = c(1, 2, 3, 0)
 test[c(1, 4)] = c(20, 30)
