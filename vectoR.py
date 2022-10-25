@@ -13,10 +13,7 @@ class c:
     def __str__(self):
         ret = "c("
         for i, item in enumerate(self.items): 
-            if i + 1 != len(self.items):
-                ret += (str(item) + ", ")
-            else:
-                ret += (str(item) + ")")
+            ret += f"{item}, " if i + 1 != len(self.items) else f"{item})"
         return ret
     
     def __getitem__(self, index):
